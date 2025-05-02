@@ -22,7 +22,7 @@ public class AddUserPage {
         @FindBy (xpath="//input[@id='Male']")
         private WebElement male;
         
-        @FindBy (xpath="//select[@class='form-control']")
+        @FindBy (xpath="//select[@class='form-controlsss']")
         private WebElement selectDropDown;
         
         @FindBy (xpath="//input[@id='password']")
