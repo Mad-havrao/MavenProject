@@ -1,5 +1,7 @@
 package testscript;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,9 +16,11 @@ public class AddUserTestScript extends BaseClass {
 	
 @Test
 	
-	public void verifyloginAddUser() {
+	public void verifyloginAddUser() throws InterruptedException {
 	LoginPage obj1=new LoginPage(driver);
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		obj1.login("kiran@gmail.com", "123456");
+		Thread.sleep(2000);
 		
 		Assert.assertEquals(driver.getCurrentUrl(), "file:///C:/Users/madhav.valande_simad/Pictures/OfflineWebsite-20250327T085218Z-001/OfflineWebsite/pages/examples/dashboard.html");
 		
